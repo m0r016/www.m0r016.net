@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+code {
+    font-family: 'Inconsolata', monospace, sans-serif;
+}
