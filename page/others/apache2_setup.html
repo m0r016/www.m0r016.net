@@ -2,27 +2,39 @@
 <html>
 
     <head>
-        <title>m0r016 Blog(beta) - webサイトの公開方法</title>
-        <link type="text/css" href="/page/others/apache2_setup.css" rel="stylesheet" />
-        <meta http-equiv="content-type" charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-    </head>
+    <title>m0r016 Blog(beta) - webサイトの公開方法</title>
+    <link type="text/css" href="/page/others/apache2_setup.css" rel="stylesheet" />
+    <meta http-equiv="content-type" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140714519-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-    <body>
-        <p>自宅サーバートをWANに公開するときに調べても、多くのサイトで省略されてて私みたいなLinux初心者にはわかりづらかったのでここに記しておきます。</p>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-        <p>環境 Ubuntu 16.04 32bit RAM 4GB</p>
-        <ul>使うもの
-            <li>apache2</li>
-            <li>ssh</li>
-            <li>sftp</li>
-        </ul>
-        <p>まずはsshでサーバーに接続し、<code>sudo apt-get upgate && sudo apt-get upgrade -y</code>とコンソールに打ちUbuntuを最新の状態にします。</p>
+    gtag('config', 'UA-140714519-1');
+</script>
 
-        <p>そして<code>sudo apt-get install apache2 -y</code>と打ち指示に従います。<br>インストールが終わるとapache2のテストページが表示されるはずなので、自分のPCがサーバーの場合ブラウザにlocalhostと打ち接続してみます。<br>私の場合、サーバーマシンを用意していたので、XXX.XXX.XXXと打ちテストページが出ることを確認します。</p>
+<body>
+    <p>自宅サーバートをWANに公開するときに調べても、多くのサイトで省略されてて私みたいなLinux初心者にはわかりづらかったのでここに記しておきます。</p>
 
-        <p>インストールされたファイルは/etc/apache2に配置されていて中身は以下のようになっています。</p>
-        <pre>
+    <p>環境 Ubuntu 16.04 32bit RAM 4GB</p>
+    <ul>使うもの
+        <li>apache2</li>
+        <li>ssh</li>
+        <li>sftp</li>
+    </ul>
+    <p>まずはsshでサーバーに接続し、<code>sudo apt-get upgate && sudo apt-get upgrade -y</code>とコンソールに打ちUbuntuを最新の状態にします。</p>
+
+    <p>そして<code>sudo apt-get install apache2 -y</code>と打ち指示に従います。<br>インストールが終わるとapache2のテストページが表示されるはずなので、自分のPCがサーバーの場合ブラウザにlocalhostと打ち接続してみます。<br>私の場合、サーバーマシンを用意していたので、XXX.XXX.XXXと打ちテストページが出ることを確認します。</p>
+
+    <p>インストールされたファイルは/etc/apache2に配置されていて中身は以下のようになっています。</p>
+    <pre>
             <code>
                 /etc/apache2/
                 |-- apache2.conf
@@ -36,14 +48,14 @@
                     `-- *.conf
             </code>
         </pre>
-        <p>私もざっくり程度しかわかりませんがapache2.confでapache2の設定を決め、サイトの設定はsites-enabledの中にある000-default.confで決めていきます。</p>
+    <p>私もざっくり程度しかわかりませんがapache2.confでapache2の設定を決め、サイトの設定はsites-enabledの中にある000-default.confで決めていきます。</p>
 
-        <p>まずはapache2.confから設定していきましょう</p>
+    <p>まずはapache2.confから設定していきましょう</p>
 
-        <code>sudo nano /etc/apache2/apache2.confと打ち</code>
+    <code>sudo nano /etc/apache2/apache2.confと打ち</code>
 
-        <p>中盤辺りにある</p>
-        <pre><code>
+    <p>中盤辺りにある</p>
+    <pre><code>
             &#60;Directory /var/www&#62;
                 Options Indexes FollowSymLinks
                 AllowOverride None
@@ -51,10 +63,10 @@
             &#60;/Directory&#62;
         </code></pre>
 
-        <p>の
+    <p>の
         &#60;Directory /var/www&#62;を指定の位置に変えます。 </p>
-        <p>ここでは/home/m0r016/webの中身(index.html)等を読み込ませたいので</p>
-            <pre><code>
+    <p>ここでは/home/m0r016/webの中身(index.html)等を読み込ませたいので</p>
+    <pre><code>
                 &#60;Directory /home/m0r016/web&#62;
                     Options Indexes FollowSymLinks
                     AllowOverride None
@@ -62,17 +74,17 @@
                 &#60;/Directory&#62;
             </code></pre>
 
-        <p>とします。</p>
+    <p>とします。</p>
 
-        <p>終わって上書き保存をしたい場合はCtrl+Xと打ち画面の指示に従います。</p>
+    <p>終わって上書き保存をしたい場合はCtrl+Xと打ち画面の指示に従います。</p>
 
-        <p>viの場合は<code>:wq</code>です</p>
+    <p>viの場合は<code>:wq</code>です</p>
 
-        <p>次ので<code>000-default.conf</code>を設定します。</p>
+    <p>次ので<code>000-default.conf</code>を設定します。</p>
 
-        <p><code>sudo nano /etc/apache2/sites-enabled/000-default.conf</code>と打ち</p>
+    <p><code>sudo nano /etc/apache2/sites-enabled/000-default.conf</code>と打ち</p>
 
-        <pre><code>
+    <pre><code>
             &#60;VirtualHost *:80&#62;
                 # The ServerName directive sets the request scheme, hostname and port that
                 # the server uses to identify itself. This is used when creating
@@ -115,48 +127,46 @@
             # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
             </code></pre>
 
-        <p>このように設定します。</p>
-        <p>説明すると
-         <li>ServerAdminには自分のメールを入れる</li>
-            <li>ServerNameには自分のドメインを入れます。</li>
-            <li>DocumentRootには公開したい部分（ここでは/home/m0r016/web )をいれます。</li>
-            <!-- <li>
+    <p>このように設定します。</p>
+    <p>説明すると
+        <li>ServerAdminには自分のメールを入れる</li>
+        <li>ServerNameには自分のドメインを入れます。</li>
+        <li>DocumentRootには公開したい部分（ここでは/home/m0r016/web )をいれます。</li>
+        <!-- <li>
                 &#60;Directory&#62;~&#60;/Directory&#62;はデフォルトで書かれていないはずなのでapache2.confで書   いた
                 &#60;Directory&#62;~&#60;/Directory&#62;
             </li>をコピペします。-->
-        </p>
-
-        <p>これでapache2側の設定は終了です。</p>
-
-        <p>次はアクセス権限を弄っていきます。</p>
-        <p>単純に言うとapache2は読み込みと実行を要します。つまり0705に設定すればいいはずです。<br>この場合自分が読み書き実行全て出来て、グループはアクセス不可、グループ外は読み込みと実行が可能となります。</p>
-
-        <p><code>sudo chmod 0705 -R /home/m0r016/web</code>と打ちます。この場合webのディレクトリ以下は<code>rwx---r-x</code>となります。</p>
-
-        <p><code>ls -l</code>で<code>rwx---r-x</code>となることを確認したら完了です。</p>
-
-        <p>そしたらapache2に再起動をかけます</p>
-
-        <code>sudo /etc/init.d/apache2 restart</code>
-
-        <p>再起動が完了したら自分のサーバーにアクセスし、アクセスすることができたら完了です。</p>
-
-        <p>forbiddenが出た場合、アクセス権限か設定が問題かと思われます。</p>
-
-        <p><code>sudo nano /var/log/apache2/error.log</code></p>
-
-        <p>と打ちどれが問題かを確認して対処します。</p>
-
-        <p>アクセス権限の場合上階層も影響するので<code>ls -lで確認</code><br> アクセス権限ではなくオーナーやグループの場合、オーナーはchown、グループはchgrpとなります。
     </p>
 
-        <p>ちなみに私の場合apache2.confは設定していたのですが、000-default.confを設定していなかったのが原因だったようです。</p>
+    <p>これでapache2側の設定は終了です。</p>
 
-        <p>何かアドバイス・質問等があればメールまたはTwitterにてご連絡ください。</p>
-        <p>最終更新日 2019-05-23</p>
+    <p>次はアクセス権限を弄っていきます。</p>
+    <p>単純に言うとapache2は読み込みと実行を要します。つまり0705に設定すればいいはずです。<br>この場合自分が読み書き実行全て出来て、グループはアクセス不可、グループ外は読み込みと実行が可能となります。</p>
 
-    </body>
+    <p><code>sudo chmod 0705 -R /home/m0r016/web</code>と打ちます。この場合webのディレクトリ以下は<code>rwx---r-x</code>となります。</p>
 
-    <footer>2019 &copy;m0r016</footer>
+    <p><code>ls -l</code>で<code>rwx---r-x</code>となることを確認したら完了です。</p>
 
-</html>
+    <p>そしたらapache2に再起動をかけます</p>
+
+    <code>sudo /etc/init.d/apache2 restart</code>
+
+    <p>再起動が完了したら自分のサーバーにアクセスし、アクセスすることができたら完了です。</p>
+
+    <p>forbiddenが出た場合、アクセス権限か設定が問題かと思われます。</p>
+
+    <p><code>sudo nano /var/log/apache2/error.log</code></p>
+
+    <p>と打ちどれが問題かを確認して対処します。</p>
+
+    <p>アクセス権限の場合上階層も影響するので<code>ls -lで確認</code><br> アクセス権限ではなくオーナーやグループの場合、オーナーはchown、グループはchgrpとなります。
+    </p>
+
+    <p>ちなみに私の場合apache2.confは設定していたのですが、000-default.confを設定していなかったのが原因だったようです。</p>
+
+    <p>何かアドバイス・質問等があればメールまたはTwitterにてご連絡ください。</p>
+    <p>最終更新日 2019-05-23</p>
+
+</body>
+
+<footer>2019 &copy;m0r016</footer></html>

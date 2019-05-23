@@ -27,12 +27,28 @@ a {
     text-decoration: none
 }
 
+a #title {
+    color: #000;
+}
+
+a:visited #title {
+    color: #000;
+}
+
+a:hover #title {
+    color: #000;
+}
+
 a:visited {
     color: #788d98
 }
 
 a:hover {
     text-decoration: underline
+}
+
+th {
+    padding-right: 10px;
 }
 
 .m0r016-spotify {
@@ -71,7 +87,7 @@ a:hover {
 #link {
     line-height: 15px;
     border-style: solid;
-    height: auto;
+    height: 150px;
     width: 950px;
     display: inline-block;
     margin-bottom: 10px;
@@ -88,7 +104,13 @@ a:hover {
     display: inline-block;
 }
 
-#log {
+.archive {
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+#msb_0508 {
     border-style: solid;
     height: auto;
     width: 950px;
@@ -97,13 +119,50 @@ a:hover {
     background-color: #fff;
 }
 
-.title {
+#msb_0512 {
+    border-style: solid;
+    height: auto;
+    width: 950px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#msb_0515 {
+    border-style: solid;
+    height: auto;
+    width: 950px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#msb_0516 {
+    border-style: solid;
+    height: auto;
+    width: 950px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#msb_0522 {
+    border-style: solid;
+    height: auto;
+    width: 950px;
+    display: inline-block;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+#title {
     margin-top: 10px;
     border-style: solid;
     height: auto;
     width: 950px;
     display: inline-block;
     background-color: #fff;
+    margin-bottom: 10px;
 }
 
 .nav {
