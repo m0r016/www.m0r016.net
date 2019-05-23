@@ -51,49 +51,6 @@ th {
     padding-right: 10px;
 }
 
-.m0r016-spotify {
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 15px;
-    line-height: 10px;
-    height: 525px;
-    width: 375px;
-    margin: 10px;
-    display: inline-block;
-}
-
-.twitter {
-    font-size: 20px;
-    border-style: solid;
-    border-radius: 15px;
-    line-height: 10px;
-    height: 525px;
-    width: 375px;
-    margin: 10px;
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-#sns {
-    text-align: center;
-    border-style: solid;
-    height: 650px;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#link {
-    line-height: 15px;
-    border-style: solid;
-    height: 150px;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
 .table {
     text-align: right;
     border-style: solid;
@@ -183,43 +140,4 @@ ul {
 .nav ul li {
     display: inline;
     margin: 30px;
-}
-
-
-#banner {
-    height: auto;
-    width: 950px;
-    border-style: solid;
-    display: inline-block;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#note {
-    height: auto;
-    width: 950px;
-    border-style: solid;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.android-girl-spotify {
-    height: auto;
-    width: 375px;
-    border-style: solid;
-    border-radius: 15px;
-    display: inline-block;
-    padding-top: 7.5px;
-    margin-bottom: 10px;
-}
-
-.msbsqn-aikotoba3 {
-    height: auto;
-    width: 575px;
-    border-style: solid;
-    border-radius: 15px;
-    padding-top: 5px;
-    display: inline-block;
-    margin-bottom: 10px;
 }
