@@ -67,43 +67,7 @@ th {
     display: inline-block;
 }
 
-#msb_0508 {
-    border-style: solid;
-    height: auto;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#msb_0512 {
-    border-style: solid;
-    height: auto;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#msb_0515 {
-    border-style: solid;
-    height: auto;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#msb_0516 {
-    border-style: solid;
-    height: auto;
-    width: 950px;
-    display: inline-block;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-
-#msb_0522 {
+.setList {
     border-style: solid;
     height: auto;
     width: 950px;
@@ -140,4 +104,13 @@ ul {
 .nav ul li {
     display: inline;
     margin: 30px;
+}
+
+.archive{
+    color: dimgrey;
+    border-style: solid;
+    height: 270px;
+    width: 480px;
+    display: inline-block;
+    margin-bottom: 10px;
 }
