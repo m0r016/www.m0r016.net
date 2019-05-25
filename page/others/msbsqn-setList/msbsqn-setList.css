@@ -106,11 +106,7 @@ ul {
     margin: 30px;
 }
 
-.archive{
-    color: dimgrey;
-    border-style: solid;
+.archive {
     height: 270px;
     width: 480px;
-    display: inline-block;
-    margin-bottom: 10px;
 }

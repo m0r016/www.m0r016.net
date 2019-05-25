@@ -7,3 +7,32 @@ body {
 code {
     font-family: 'Inconsolata', monospace, sans-serif;
 }
+
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#pageTop i {
+  padding-top: 6px
+}
+
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 8px 0 0 8px;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: #9FD6D2;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
