@@ -1,38 +1,69 @@
 @charset "utf-8";
 
-body {
-    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+@media screen and (max-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+
+    code {
+        font-family: 'Inconsolata', monospace, sans-serif;
+        width: 90vw;
+        display: none;
+    }
+
+    #title {
+        height: auto;
+        width: 90vw;
+        border-style: solid;
+        display: inline-block;
+        padding: 1vw;
+        margin: 1vw;
+    }
+
+    #text {
+        text-align: left;
+        width: 90vw;
+        border-style: solid;
+        display: inline-block;
+        padding: 1vw;
+        margin-bottom: 1vw;
+    }
 }
 
-code {
-    font-family: 'Inconsolata', monospace, sans-serif;
-}
+@media screen and (min-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
 
-#pageTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
+    code {
+        font-family: 'Inconsolata', monospace, sans-serif;
+        width: 950px;
+    }
 
-#pageTop i {
-  padding-top: 6px
-}
+    #title {
+        height: auto;
+        width: 950px;
+        border-style: solid;
+        display: inline-block;
+        margin: 10px 0;
+    }
 
-#pageTop a {
-  display: block;
-  z-index: 999;
-  padding: 8px 0 0 8px;
-  border-radius: 30px;
-  width: 35px;
-  height: 35px;
-  background-color: #9FD6D2;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
+    #text {
+        text-align: left;
+        height: auto;
+        width: 930px;
+        border-style: solid;
+        display: inline-block;
+        padding: 0px 10px;
+    }
 
-#pageTop a:hover {
-  text-decoration: none;
-  opacity: 0.7;
+    footer {
+        text-align: center
+    }
 }
