@@ -1,9 +1,7 @@
 @charset "utf-8";
 
 /* iPhone X以下の端末 */
-@media screen and (max-width:896px) {}
-
-@media screen and (min-width:896px) {
+@media screen and (max-width:896px) {
     body {
         font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
         text-align: center;
@@ -58,10 +56,10 @@
     .table {
         text-align: right;
         border-style: solid;
-        border-radius: 15px;
+        border-radius: 2vw;
         height: auto;
         width: auto;
-        padding: 10px;
+        padding: 1vw;
         display: inline-block;
     }
 
@@ -74,28 +72,28 @@
     .setList {
         border-style: solid;
         height: auto;
-        width: 950px;
+        width: 90vw;
         display: inline-block;
-        margin-bottom: 10px;
+        margin-bottom: 1vw;
         background-color: #fff;
     }
 
     #title {
-        margin-top: 10px;
+        margin-top: 1vw;
         border-style: solid;
         height: auto;
-        width: 950px;
+        width: 90vw;
         display: inline-block;
         background-color: #fff;
-        margin-bottom: 10px;
+        margin-bottom: 1vw;
     }
 
     .nav {
-        margin: 10px auto 10px auto;
+        margin: 1vw auto 1vw auto;
         border-style: solid;
         height: auto;
-        width: 950px;
-        font-size: 25px;
+        width: 90vw;
+        font-size: 5vw;
         background-color: #fff;
     }
 
@@ -107,11 +105,130 @@
 
     .nav ul li {
         display: inline;
-        margin: 30px;
+        margin: 3vw;
     }
 
-    .archive {
-        height: 270px;
-        width: 480px;
+    .archive video {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
     }
+
+    .archive iframe {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    @media screen and (min-width:896px) {
+        body {
+            font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+.bg{
+    background-image: url(/page/img/index_bg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
+*/
+        footer {
+            text-align: center;
+            background-color: #c0c1b0;
+            height: auto;
+        }
+
+        a {
+            color: #3583aa;
+            text-decoration: none
+        }
+
+        a #title {
+            color: #000;
+        }
+
+        a:visited #title {
+            color: #000;
+        }
+
+        a:hover #title {
+            color: #000;
+        }
+
+        a:visited {
+            color: #788d98
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        th {
+            padding-right: 10px;
+        }
+
+        .table {
+            text-align: right;
+            border-style: solid;
+            border-radius: 15px;
+            height: auto;
+            width: auto;
+            padding: 10px;
+            display: inline-block;
+        }
+
+        .archive {
+            height: auto;
+            width: auto;
+            display: inline-block;
+        }
+
+        .setList {
+            border-style: solid;
+            height: auto;
+            width: 950px;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+
+        #title {
+            margin-top: 10px;
+            border-style: solid;
+            height: auto;
+            width: 950px;
+            display: inline-block;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            margin: 10px auto 10px auto;
+            border-style: solid;
+            height: auto;
+            width: 950px;
+            font-size: 25px;
+            background-color: #fff;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .nav ul li {
+            display: inline;
+            margin: 30px;
+        }
+
+        .archive {
+            height: 270px;
+            width: 480px;
+        }
+    }
