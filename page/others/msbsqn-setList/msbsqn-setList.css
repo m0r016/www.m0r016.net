@@ -62,9 +62,19 @@
         border-style: solid;
         border-radius: 2vw;
         height: auto;
+        /*
         min-width: 425px;
+        */
         padding: 1vw;
         display: inline-block;
+    }
+
+    .table,
+    th,
+    td {
+        border-style: solid;
+        border-collapse: collapse;
+
     }
 
     .archive {
