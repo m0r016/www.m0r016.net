@@ -49,9 +49,6 @@
         text-decoration: underline
     }
 
-    th {
-        padding-right: 10px;
-    }
 
     .scroll {
         overflow-x: auto;
