@@ -130,8 +130,14 @@
         max-width: 100%;
         height: auto;
     }
+
+    .blockquote {
+        width: 90%;
+        display: inline-block;
+    }
 }
 
+/* iPhone X以上の端末 */
 @media screen and (min-width:896px) {
     body {
         font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -242,5 +248,9 @@
     .archive {
         height: 270px;
         width: 480px;
+    }
+
+    .blockquote {
+        display: inline-block;
     }
 }
