@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@media screen and (max-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 0.5vw;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .mes {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    footer {
+        text-align: center;
+        background-color: dimgrey;
+    }
+}
+
+@media screen and (min-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .mes {
+        text-align: center;
+        line-height: 20px;
+    }
+
+    footer {
+        text-align: center;
+        background-color: dimgrey;
+    }
+}
