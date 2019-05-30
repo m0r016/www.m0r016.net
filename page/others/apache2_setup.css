@@ -32,6 +32,22 @@
         padding: 1vw;
         margin-bottom: 1vw;
     }
+
+    .back-to-top {
+        /* スクロールされても位置を固定する */
+        position: fixed;
+        /* 画面右下に表示 */
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 2.5px;
+    }
+
+    .angel {
+        color: skyblue;
+    }
 }
 
 /* ------------------ */
@@ -63,6 +79,22 @@
         border-style: solid;
         display: inline-block;
         padding: 0px 10px;
+    }
+
+    .back-to-top {
+        /* スクロールされても位置を固定する */
+        position: fixed;
+        /* 画面右下に表示 */
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 2.5px;
+    }
+
+    .angel {
+        color: dimgray;
     }
 
     footer {
