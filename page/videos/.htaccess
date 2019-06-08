@@ -1,1 +1,4 @@
 Options +Indexes
+
+AddType application/x-mpegURL .m3u8
+AddType video/MP2T .ts
