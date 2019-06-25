@@ -10,7 +10,7 @@
     }
 
     .bg {
-        background-color: rgb(248, 255, 150);
+        background-image: url(bg1.JPG)
     }
 
     footer {
@@ -164,7 +164,7 @@
     }
 
     .bg {
-        background-color: rgb(248, 255, 150);
+        background-image: url(bg.JPG);
     }
 
     footer {
