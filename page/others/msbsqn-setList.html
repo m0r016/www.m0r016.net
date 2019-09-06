@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>m0r016.net - むすぶ配信 セトリ 2019.06~</title>
+    <title>m0r016.net - むすぶ配信 セトリ 2019.05~</title>
     <link type="text/css" href="/page/others/msbsqn-setList/msbsqn-setList.css" rel="stylesheet" />
     <meta http-equiv="content-type" charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
@@ -27,12 +27,39 @@
 
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- Or if you want a more recent canary version -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
+<script>
+    var video = document.getElementById('video');
+    if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+        });
+    }
+    // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+    // This is using the built-in support of the plain video element, without using hls.js.
+    // Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
+    // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';
+        video.addEventListener('loadedmetadata', function() {
+            video.play();
+        });
+    }
+
+</script>
+
 <body>
     <div id="body">
         <div class="bg">
             <a href="https://www.m0r016.net/">
                 <div id="title">
-                    <h1>むすぶ 配信セトリ 2019/07~</h1>
+                    <h1>むすぶ 配信セトリ 2019/09~</h1>
                     <p>※若干のズレがあります</p>
                     <p>※アーカイブにつきましては、本人に掲載許可を頂いています。</p>
 
@@ -43,6 +70,8 @@
                     <ul>
                         <li><a href="/page/others/msbsqn-setList/2019-05.html">2019/05</a></li>
                         <li><a href="/page/others/msbsqn-setList/2019-06.html">2019/06</a></li>
+                        <li><a href="/page/others/msbsqn-setList/2019-07.html">2019/07</a>
+                        <li><a href="/page/others/msbsqn-setList/2019-08.html">2019/08</a></li>
                         <li><a href="/page/videos/msbsqn/">others</a></li>
                     </ul>
                 </nav>
@@ -50,10 +79,9 @@
             <div class="nav">
                 <nav>
                     <ul>
-                        <li><a href="#msb_0701">07/01</a></li>
-                        <li><a href="#msb_0703">07/03</a></li>
-                        <li><a href="#msb_0704">07/04</a></li>
-                        <li><a href="#msb_0709">07/09</a></li>
+                        <li><a href="#msb_0902">09/02</a></li>
+                        <li><a href="#msb_0903">09/03</a></li><li><a href="#msb_0904">09/04</a></li><li><a href="#msb_0906">09/06</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -79,29 +107,9 @@
 </div>
             </div>
             -->
-            <div id="msb_0701">
+            <div id="msb_0902">
                 <div class="setList">
-                    <h2>2019/07/01</h2>
-                    <p>ちょっと深夜雑</p>
-                    <p></p>
-                    <div class="archive">
-                        <video poster="/page/others/msbsqn-setList/common/msbsqn-talk.png" controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/msbsqn/msbsqn_2019-07-01_00-16-09.mp4">
-                        </video>
-                    </div>
-                    <p></p>
-                    <p>夕方LoLからのDbD</p>
-                    <div class="archive">
-                        <video poster="/page/others/msbsqn-setList/common/msbsqn-talk.png" controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-06-15_00-16-09.m3u8">
-                        </video>
-                    </div>
-
-                </div>
-            </div>
-            <div id="msb_0703">
-                <div class="setList">
-                    <h2>2019/07/03</h2>
+                    <h2>2019/09/02</h2>
                     <div class="scroll">
                         <table class="table">
                             <tr>
@@ -109,39 +117,38 @@
                                 <td>曲名</td>
                             </tr>
                             <tr>
-                                <th>48：37</th>
-                                <td>デリヘル呼んだら君がきた</td>
+                                <th>40：00</th>
+                                <td>月曜日の憂鬱</td>
                             </tr>
                             <tr>
-                                <th>63：22</th>
-                                <td>バレリーコ</td>
+                                <th>52：30</th>
+                                <td>夏祭り</td>
+                            </tr>
+                            <tr>
+                                <th>64：00</th>
+                                <td>ロミオとシンデレラ</td>
                             </tr>
                             <tr>
                                 <th>73：00</th>
-                                <td>テレキャスタービーボーイ</td>
+                                <td>ロキ</td>
                             </tr>
                             <tr>
-                                <th>75：00</th>
-                                <td>テレキャスタービーボーイ</td>
-                            </tr>
-                            <tr>
-                                <th>84：00</th>
-                                <td>ファンサ</td>
+                                <th>83：00</th>
+                                <td>sweets parade</td>
                             </tr>
                         </table>
                     </div>
                     <p></p>
                     <div class="archive">
                         <video poster="/page/others/msbsqn-setList/common/msbsqn-archive.png" controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/msbsqn/msbsqn_2019-07-03_19-02-11.mp4">
+                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-09-02_17-03-04.m3u8">
                         </video>
-
                     </div>
                 </div>
             </div>
-            <div id="msb_0704">
+            <div id="msb_0903">
                 <div class="setList">
-                    <h2>2019/07/04</h2>
+                    <h2>2019/09/03</h2>
                     <div class="scroll">
                         <table class="table">
                             <tr>
@@ -149,58 +156,107 @@
                                 <td>曲名</td>
                             </tr>
                             <tr>
-                                <th>23：00</th>
-                                <td>本気ボンバー</td>
+                                <th>11：20</th>
+                                <td>Painter</td>
                             </tr>
                             <tr>
-                                <th>33：00</th>
-                                <td>ミスター・ダーリン</td>
+                                <th>20：00</th>
+                                <td>Mr.Music</td>
                             </tr>
                             <tr>
-                                <th>42：00</th>
-                                <td>ミスター・ダーリン</td>
+                                <th>27：30</th>
+                                <td>きょうもハレバレ</td>
                             </tr>
                             <tr>
-                                <th>51：20</th>
+                                <th>40：00</th>
+                                <td>夜もすがら君想ふ</td>
+                            </tr>
+                            <tr>
+                                <th>47：30</th>
+                                <td>少女レイ</td>
+                            </tr>
+                            <tr>
+                                <th>60：30</th>
+                                <td>ダンスロボットダンス</td>
+                            </tr>
+                            <tr>
+                                <th>74：15</th>
+                                <td>私、アイドル宣言</td>
+                            </tr>
+                            <tr>
+                                <th>84：30</th>
                                 <td>メランコリック</td>
                             </tr>
+                        </table>
+                    </div>
+                    <p></p>
+                    <div class="archive">
+                        <video poster="/page/others/msbsqn-setList/common/msbsqn-archive.png" controls width="480px" height="270px" preload="none" playsinline>
+                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-09-03_19-57-27.m3u8">
+                        </video>
+                    </div>
+                </div>
+            </div>
+<div id="msb_0904">
+                <div class="setList">
+                    <h2>2019/09/04</h2>
+                    <p>DbD</p>
+                    <div class="archive">
+                        <video poster="/page/others/msbsqn-setList/common/msbsqn-talk.png" controls width="480px" height="270px" preload="none" playsinline>
+                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-09-05_19-30-22.m3u8">
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+<div id="msb_0906">
+                <div class="setList">
+                    <h2>2019/09/06</h2>
+                    <div class="scroll">
+                        <table class="table">
                             <tr>
-                                <th>62：20</th>
+                                <th>時間</th>
+                                <td>曲名</td>
+                            </tr>
+                            <tr>
+                                <th>12：00</th>
                                 <td>白い雪のプリンセスは</td>
                             </tr>
                             <tr>
-                                <th>73：00</th>
-                                <td>有頂天ビバーチェ</td>
+                                <th>21：30</th>
+                                <td>ロメオ</td>
                             </tr>
                             <tr>
-                                <th>80：30</th>
-                                <td>インドア系ならトラックメイカー</td>
+                                <th>30：00</th>
+                                <td>かいしんのいちげき</td>
                             </tr>
+                            <tr>
+                                <th>42：30</th>
+                                <td>ブラック★ロックシューター</td>
+                            </tr>
+                            <tr>
+                                <th>53：30</th>
+                                <td>はやくそれになりたい！</td>
+                            </tr>
+                            <tr>
+                                <th>56：00</th>
+                                <td>ポジティブ☆ダンスタイム</td>
+                            </tr>
+                            <tr>
+                                <th>82：30</th>
+                                <td>さようなら、花泥棒さん</td>
+                            </tr>
+
                         </table>
                     </div>
                     <p></p>
                     <div class="archive">
                         <video poster="/page/others/msbsqn-setList/common/msbsqn-archive.png" controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-07-04_19-50-00.m3u8">
+                            <source src="/page/videos/msbsqn/hls/msbsqn_2019-09-06_21-19-24.m3u8">
                         </video>
                     </div>
                 </div>
             </div>
-            <div id="msb_0709">
-                <div class="setList">
-                    <h2>2019/07/09 差し入れ開封枠</h2>
-                    <p>SLPの差し入れ開封枠</p>
-                    <p>もう行動一つ一つが可愛い、天使</p>
-                    <p></p>
-                    <div class="archive">
-
-                        <video poster="/page/others/msbsqn-setList/common/msbsqn-talk.png" controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/hls/msbsqn/msbsqn_2019-07-09_19-02-57.m3u8">
-                        </video>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="back-to-top">
             <a href="#"><i class="fas fa-angle-up fa-3x angel"></i></a>

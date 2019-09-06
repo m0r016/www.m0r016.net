@@ -2,3 +2,4 @@ Options +Indexes
 
 AddType application/x-mpegURL .m3u8
 AddType video/MP2T .ts
+DirectoryIndex index.html index.php /page/videos/_h5ai/public/index.php

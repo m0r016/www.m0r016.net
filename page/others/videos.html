@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>m0r016.net - 動画置き場</title>
+    <link type="text/css" href="/page/others/videos/videos.css" rel="stylesheet" />
+    <meta http-equiv="content-type" charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="icon" href="/common/img/m0r016_shio00917_normal.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="/common/img/m0r016_shio00917_apple-touch-icon.ico" type="image/vnd.microsoft.icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/common/common.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140714519-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140714519-1');
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!-- Or if you want a more recent canary version -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script> -->
+<script>
+    var video = document.getElementById('video');
+    if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource('https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            video.play();
+        });
+    }
+    // hls.js is not supported on platforms that do not have Media Source Extensions (MSE) enabled.
+    // When the browser has built-in HLS support (check using `canPlayType`), we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video element throught the `src` property.
+    // This is using the built-in support of the plain video element, without using hls.js.
+    // Note: it would be more normal to wait on the 'canplay' event below however on Safari (where you are most likely to find built-in HLS support) the video.src URL must be on the user-driven
+    // white-list before a 'canplay' event will be emitted; the last video event that can be reliably listened-for when the URL is not on the white-list is 'loadedmetadata'.
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = 'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';
+        video.addEventListener('loadedmetadata', function() {
+            video.play();
+        });
+    }
+
+</script>
+
+<body>
+    <div id="body">
+        <div class="bg">
+            <a href="https://www.m0r016.net/">
+                <div id="title">
+                    <h1>動画置き場</h1>
+
+                </div>
+            </a>
+            <div>
+                <div class="setList">
+                    <h2>ASIAN KUNG-FU GENERATION FUJI ROCK '19</h2>
+                    <div class="archive">
+                        <video controls width="480px" height="270px" preload="none" playsinline>
+                            <source src="/page/videos/FUJI%20ROCK%20FESTIVAL%20%2719%20LIVE%20Channel%202%20-%20ASIAN%20KUNG-FU%20GENERATION/video.m3u8">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="setList">
+                    <h2>ハルカナ 08/10</h2>
+                    <div class="archive">
+                        <video controls width="480px" height="270px" preload="none" playsinline>
+                            <source src="/page/videos/harukana_123/harukana_123_2019-08-10_21-00-48.m3u8">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="back-to-top">
+                <a href="#"><i class="fas fa-angle-up fa-3x angel"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    このサイトは開発中です。お問い合わせは<a href="https://twitter.com/m0r016/">Twitter</a>まで
+    <br>Copyright 2018-2019 by m0r016
+</footer>
+
+</html>
