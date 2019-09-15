@@ -73,13 +73,12 @@
         padding-left: 1vw;
     }
 
-    /*
     .archive {
         height: auto;
         width: auto;
         display: inline-block;
     }
-*/
+
     .setList {
         -webkit-box-shadow: 0.1vw 0.5vw 1vw;
         box-shadow: 0.1vw 0.5vw 1vw;
@@ -128,13 +127,12 @@
         height: auto;
     }
 
-    /*
     .archive iframe {
         width: 90%;
         max-width: 100%;
         height: auto;
     }
-*/
+
     .blockquote {
         width: 90%;
         display: inline-block;
