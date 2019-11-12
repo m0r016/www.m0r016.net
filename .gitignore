@@ -2,3 +2,8 @@
 *._*
 *.ts
 *.mp4
+.htaccess
+.htpasswd
+*.m4a
+*.mkv
+*.mp4.lwi
