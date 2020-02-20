@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* iPhone X以下の端末 */
+
 @media screen and (max-width:896px) {
     body {
         font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -8,48 +9,37 @@
         margin: 0;
         padding: 0;
     }
-
     .bg {
         background-color: white;
     }
-
     footer {
         text-align: center;
         border-top: solid 1px #000;
         background-color: gray;
         height: auto;
     }
-
     a {
         color: #3583aa;
         text-decoration: none
     }
-
     a #title {
         color: #000;
     }
-
     a:visited #title {
         color: #000;
     }
-
     a:hover #title {
         color: #000;
     }
-
     a:visited {
         color: #788d98
     }
-
     a:hover {
         text-decoration: underline
     }
-
-
     .scroll {
         overflow-x: auto;
     }
-
     .table {
         text-align: right;
         border: solid 0px #000;
@@ -60,25 +50,20 @@
         padding: 1vw;
         display: inline-block;
     }
-
     .table,
     th,
     td {
         border-style: solid;
         border-collapse: collapse;
-
     }
-
     td {
         padding-left: 1vw;
     }
-
     .archive {
         height: auto;
         width: auto;
         display: inline-block;
     }
-
     .setList {
         -webkit-box-shadow: 0.1vw 0.5vw 1vw;
         box-shadow: 0.1vw 0.5vw 1vw;
@@ -88,7 +73,6 @@
         margin-bottom: 1vw;
         background-color: #fff;
     }
-
     #title {
         margin-top: 1vw;
         -webkit-box-shadow: 0.1vw 0.5vw 1vw;
@@ -99,7 +83,6 @@
         background-color: #fff;
         margin-bottom: 1vw;
     }
-
     .nav {
         margin: 1vw auto 1vw auto;
         -webkit-box-shadow: 0.1vw 0.5vw 1vw;
@@ -109,37 +92,31 @@
         font-size: 5vw;
         background-color: #fff;
     }
-
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
-
     .nav ul li {
         display: inline;
         margin: 3vw;
     }
-
     .archive video {
         width: 90%;
         max-width: 100%;
         height: auto;
     }
-
     .archive iframe {
         width: 90%;
         max-width: 100%;
         height: auto;
     }
-
     .blockquote {
         width: 90%;
         display: inline-block;
         -webkit-box-shadow: 0.1vw 0.5vw 1vw;
         box-shadow: 0.1vw 0.5vw 1vw;
     }
-
     .back-to-top {
         /* スクロールされても位置を固定する */
         position: fixed;
@@ -153,13 +130,14 @@
         box-shadow: 0px 0px 2.5px;
         background-color: white;
     }
-
     .angel {
         color: skyblue;
     }
 }
 
+
 /* iPhone X以上の端末 */
+
 @media screen and (min-width:896px) {
     body {
         font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -167,47 +145,37 @@
         margin: 0;
         padding: 0;
     }
-
     .bg {
         background-color: white;
     }
-
     footer {
         text-align: center;
         border-top: solid 1px #000;
         background-color: gray;
         height: auto;
     }
-
     a {
         color: #3583aa;
         text-decoration: none
     }
-
     a #title {
         color: #000;
     }
-
     a:visited #title {
         color: #000;
     }
-
     a:hover #title {
         color: #000;
     }
-
     a:visited {
         color: #788d98
     }
-
     a:hover {
         text-decoration: underline
     }
-
     th {
         padding-right: 10px;
     }
-
     .table {
         text-align: right;
         border: solid 1px #000;
@@ -217,13 +185,11 @@
         padding: 10px;
         display: inline-block;
     }
-
     .archive {
         height: auto;
         width: auto;
         display: inline-block;
     }
-
     .setList {
         -webkit-box-shadow: 1px 5px 10px;
         box-shadow: 1px 5px 10px;
@@ -233,7 +199,6 @@
         margin-bottom: 10px;
         background-color: #fff;
     }
-
     #title {
         margin-top: 10px;
         -webkit-box-shadow: 1px 5px 10px;
@@ -244,7 +209,6 @@
         background-color: #fff;
         margin-bottom: 10px;
     }
-
     .nav {
         margin: 10px auto 10px auto;
         -webkit-box-shadow: 1px 5px 10px;
@@ -254,29 +218,24 @@
         font-size: 25px;
         background-color: #fff;
     }
-
     ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
     }
-
     .nav ul li {
         display: inline;
         margin: 30px;
     }
-
     .archive {
         height: 270px;
         width: 480px;
     }
-
     .blockquote {
         display: inline-block;
         -webkit-box-shadow: 1px 5px 10px;
         box-shadow: 1px 5px 10px;
     }
-
     .back-to-top {
         /* スクロールされても位置を固定する */
         position: fixed;
@@ -290,7 +249,6 @@
         box-shadow: 0px 0px 2.5px;
         background-color: white;
     }
-
     .angel {
         color: dimgray;
     }

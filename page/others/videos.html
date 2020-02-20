@@ -18,7 +18,9 @@
     <!-- -->
 
     <script src="/common/reframe/reframe.min.js"></script>
-    <script>reframe('archive')</script>
+    <script>
+        reframe('archive')
+    </script>
 
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -32,7 +34,6 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-140714519-1');
-
 </script>
 
 <body>
@@ -49,19 +50,31 @@
                     <h2>ASIAN KUNG-FU GENERATION FUJI ROCK '19</h2>
                     <div class="archive">
                         <video controls width="480px" height="270px" preload="none" playsinline>
-                            <source src="/page/videos/FUJI%20ROCK%20FESTIVAL%20%2719%20LIVE%20Channel%202%20-%20ASIAN%20KUNG-FU%20GENERATION/video.m3u8">
-                        </video>
+                                <source
+                                    src="/page/videos/FUJI%20ROCK%20FESTIVAL%20%2719%20LIVE%20Channel%202%20-%20ASIAN%20KUNG-FU%20GENERATION/video.m3u8">
+                            </video>
 
                     </div>
                     <p>Video.js↓</p>
                     <div class="archive">
-                        <video class=video-js controls width="480px" height="270px" preload='none' data-setup='{}'>
-                            <source src='/page/videos/FUJI%20ROCK%20FESTIVAL%20%2719%20LIVE%20Channel%202%20-%20ASIAN%20KUNG-FU%20GENERATION/video.m3u8' type='application/x-mpegURL'>
-                            <p class='vjs-no-js'>
-                                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                                <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
-                            </p>
-                        </video>
+                        <video id="video-js" class="video-js vjs-big-play-centered" controls width="480px" height="270px" preload="none" data-setup="{}" playsinline>
+                                <script>
+                                    videojs('video-js', {
+                                        responsive: true,
+                                        width: 480,
+                                        height: 270
+                                    });
+                                </script>
+                                <source
+                                    src="/page/videos/FUJI%20ROCK%20FESTIVAL%20%2719%20LIVE%20Channel%202%20-%20ASIAN%20KUNG-FU%20GENERATION/video.m3u8"
+                                    type="application/x-mpegURL">
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a web browser
+                                    that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                                        video</a>
+                                </p>
+                            </video>
 
                     </div>
                 </div>
