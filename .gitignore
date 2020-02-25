@@ -10,4 +10,8 @@
 *.mks.lwi
 *.m4a.lwi
 *.zip
+<<<<<<< HEAD
 *.flv
+=======
+*.flv
+>>>>>>> development
