@@ -59,11 +59,6 @@
     td {
         padding-left: 1vw;
     }
-    .archive {
-        height: auto;
-        width: auto;
-        display: inline-block;
-    }
     .setList {
         box-shadow: 0.1vw 0.5vw 1vw;
         height: auto;
@@ -108,17 +103,17 @@
         max-width: 100%;
         height: auto;
     }
-    .video-js-responsive-container.vjs-hd {
+    .archive.vjs-hd {
         padding-top: 56.25%;
     }
-    .video-js-responsive-container.vjs-sd {
+    .archive.vjs-sd {
         padding-top: 75%;
     }
-    .video-js-responsive-container {
+    .archive {
         width: 100%;
         position: relative;
     }
-    .video-js-responsive-container .video-js {
+    .archive .video-js {
         height: 100% !important;
         width: 100% !important;
         position: absolute;
