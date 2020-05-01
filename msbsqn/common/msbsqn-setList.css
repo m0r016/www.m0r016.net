@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/* iPhone X以下の端末 */
+
+@media screen and (max-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .bg {
+        background-image: url(/page/others/msbsqn-setList/common/bg.JPG)
+    }
+    footer {
+        text-align: center;
+        border-top: solid 1px #000;
+        background-color: rgba(248, 255, 150, 0.75);
+        height: auto;
+    }
+    a {
+        color: #3583aa;
+        text-decoration: none
+    }
+    a #title {
+        color: #000;
+    }
+    a:visited #title {
+        color: #000;
+    }
+    a:hover #title {
+        color: #000;
+    }
+    a:visited {
+        color: #788d98
+    }
+    a:hover {
+        text-decoration: underline
+    }
+    .scroll {
+        overflow-x: auto;
+    }
+    .table {
+        text-align: right;
+        border: solid 0px #000;
+        height: auto;
+        /*
+        min-width: 425px;
+        */
+        padding: 1vw;
+        display: inline-block;
+    }
+    .table,
+    th,
+    td {
+        border-style: solid;
+        border-collapse: collapse;
+    }
+    td {
+        padding-left: 1vw;
+    }
+    .setList {
+        box-shadow: 0.1vw 0.5vw 1vw;
+        height: auto;
+        width: 90vw;
+        display: inline-block;
+        margin-bottom: 1vw;
+        background-color: #fff;
+    }
+    #title {
+        margin-top: 1vw;
+        box-shadow: 0.1vw 0.5vw 1vw;
+        height: auto;
+        width: 90vw;
+        display: inline-block;
+        background-color: #fff;
+        margin-bottom: 1vw;
+    }
+    .nav {
+        margin: 1vw auto 1vw auto;
+        box-shadow: 0.1vw 0.5vw 1vw;
+        height: auto;
+        width: 90vw;
+        font-size: 5vw;
+        background-color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .nav ul li {
+        display: inline;
+        margin: 3vw;
+    }
+    .archive video {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+    .archive iframe {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+    .archive.vjs-hd {
+        padding-top: 56.25%;
+    }
+    .archive.vjs-sd {
+        padding-top: 75%;
+    }
+    .archive {
+        width: 100%;
+        position: relative;
+    }
+    .archive .video-js {
+        height: 100% !important;
+        width: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .blockquote {
+        width: 90%;
+        display: inline-block;
+        box-shadow: 0.1vw 0.5vw 1vw;
+    }
+    .youtube {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .youtube iframe {
+        position: absolute;
+        top: 0;
+        left: 2.5%;
+        width: 95%;
+        height: 95%;
+    }
+    .back-to-top {
+        /* スクロールされても位置を固定する */
+        position: fixed;
+        /* 画面右下に表示 */
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 2.5px;
+        background-color: white;
+    }
+    .angel {
+        color: skyblue;
+    }
+}
+
+
+/* iPhone X以上の端末 */
+
+@media screen and (min-width:896px) {
+    body {
+        font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .bg {
+        background-image: url(/page/others/msbsqn-setList/common/bg.JPG);
+    }
+    footer {
+        text-align: center;
+        border-top: solid 1px #000;
+        background-color: rgba(248, 255, 150, 0.75);
+        height: auto;
+    }
+    a {
+        color: #3583aa;
+        text-decoration: none
+    }
+    a #title {
+        color: #000;
+    }
+    a:visited #title {
+        color: #000;
+    }
+    a:hover #title {
+        color: #000;
+    }
+    a:visited {
+        color: #788d98
+    }
+    a:hover {
+        text-decoration: underline
+    }
+    th {
+        padding-right: 10px;
+    }
+    .table {
+        text-align: right;
+        border: solid 1px #000;
+        border-radius: 15px;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        display: inline-block;
+    }
+    .archive {
+        height: auto;
+        width: auto;
+        display: inline-block;
+    }
+    .setList {
+        box-shadow: 1px 5px 10px;
+        min-height: 645px;
+        height: auto;
+        width: 950px;
+        display: inline-block;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+    #title {
+        margin-top: 10px;
+        box-shadow: 1px 5px 10px;
+        height: auto;
+        width: 950px;
+        display: inline-block;
+        background-color: #fff;
+        margin-bottom: 10px;
+    }
+    .nav {
+        margin: 10px auto 10px auto;
+        box-shadow: 1px 5px 10px;
+        height: auto;
+        width: 950px;
+        font-size: 25px;
+        background-color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    .nav ul li {
+        display: inline;
+        margin: 30px;
+    }
+    .archive {
+        height: 270px;
+        width: 480px;
+    }
+    .blockquote {
+        display: inline-block;
+        box-shadow: 1px 5px 10px;
+    }
+    .back-to-top {
+        /* スクロールされても位置を固定する */
+        position: fixed;
+        /* 画面右下に表示 */
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 2.5px;
+        background-color: white;
+    }
+    .angel {
+        color: dimgray;
+    }
+}
